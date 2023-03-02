@@ -1,0 +1,12 @@
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\bin\Debug\net7.0\TasksHandler.deps.json
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\bin\Debug\net7.0\TasksHandler.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\bin\Debug\net7.0\TasksHandler.pdb
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.csproj.AssemblyReference.cache
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.AssemblyInfoInputs.cache
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.AssemblyInfo.cs
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.csproj.CoreCompileInputs.cache
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\refint\TasksHandler.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\TasksHandler.pdb
+C:\Users\Nuno\Desktop\Github\TaskHandler\TasksHandler\obj\Debug\net7.0\ref\TasksHandler.dll
