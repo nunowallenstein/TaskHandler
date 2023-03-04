@@ -10,3 +10,15 @@ C:\Users\Nuno\Desktop\Github\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGe
 C:\Users\Nuno\Desktop\Github\TaskHandler\TasksGenerator\obj\Debug\net7.0\refint\TasksGenerator.dll
 C:\Users\Nuno\Desktop\Github\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.pdb
 C:\Users\Nuno\Desktop\Github\TaskHandler\TasksGenerator\obj\Debug\net7.0\ref\TasksGenerator.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\bin\Debug\net7.0\TasksGenerator.deps.json
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\bin\Debug\net7.0\TasksGenerator.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\bin\Debug\net7.0\TasksGenerator.pdb
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.csproj.AssemblyReference.cache
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.AssemblyInfoInputs.cache
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.AssemblyInfo.cs
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\refint\TasksGenerator.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\TasksGenerator.pdb
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\TasksGenerator\obj\Debug\net7.0\ref\TasksGenerator.dll

@@ -1,6 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using TasksHandler;
 using TasksGenerator;
+using System.Reflection.Metadata.Ecma335;
+using System.Diagnostics;
+using System.Collections.Concurrent;
+
 internal class Program
 {
     private static async Task Main(string[] args)
@@ -8,20 +12,26 @@ internal class Program
 
 
 
-        var qTasks = new Queue<Func<Task>>();
-
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 1));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 2));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 3));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 5));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 6));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 7));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 8));
-        qTasks.Enqueue(() => Tasks.TaskWithTimeout(10000, 9));
+        var qTasks = new ConcurrentQueue<Func<Task>>();
+        foreach (var num in Enumerable.Range(1, 7))
+        {
+            qTasks.Enqueue(() => Tasks.TaskWithTimeout(3000, num));
+        }
 
 
-        var taskHandler = new TaskHandler(2, qTasks);
-        await taskHandler.Execute();
+        var sw = new Stopwatch();
+        var taskHandler = new AsyncTaskController(3);
+        var tasks = new List<Task>();
+        foreach (var num in Enumerable.Range(1, 7))
+        {
+            tasks.Add(taskHandler.EnqueueAsync(async () =>
+            {
+                await Tasks.TaskWithTimeout(3000, num);
+                return Task.Factory.StartNew(() => num);
+            }));
+        }
+       
+            await Task.WhenAll(tasks);
 
         Console.ReadKey();
     }
