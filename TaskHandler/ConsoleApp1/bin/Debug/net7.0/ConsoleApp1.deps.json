@@ -9,10 +9,15 @@
       "ConsoleApp1/1.0.0": {
         "dependencies": {
           "TasksGenerator": "1.0.0",
-          "TasksHandler": "1.0.0"
+          "TasksHandler.Application": "1.0.0"
         },
         "runtime": {
           "ConsoleApp1.dll": {}
+        }
+      },
+      "TaskHandler.Domain/1.0.0": {
+        "runtime": {
+          "TaskHandler.Domain.dll": {}
         }
       },
       "TasksGenerator/1.0.0": {
@@ -20,9 +25,12 @@
           "TasksGenerator.dll": {}
         }
       },
-      "TasksHandler/1.0.0": {
+      "TasksHandler.Application/1.0.0": {
+        "dependencies": {
+          "TaskHandler.Domain": "1.0.0"
+        },
         "runtime": {
-          "TasksHandler.dll": {}
+          "TasksHandler.Application.dll": {}
         }
       }
     }
@@ -33,12 +41,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "TaskHandler.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "TasksGenerator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "TasksHandler/1.0.0": {
+    "TasksHandler.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

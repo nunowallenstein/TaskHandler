@@ -10,18 +10,7 @@ internal class Program
 {
     private static async Task Main(string[] args)
     {
-
-
-
-        var qTasks = new ConcurrentQueue<Func<Task>>();
-        foreach (var num in Enumerable.Range(1, 7))
-        {
-            qTasks.Enqueue(() => Tasks.TaskWithTimeout(3000, num));
-        }
-
-
-        var sw = new Stopwatch();
-        var taskHandler = new AsyncTaskController(3,EnumCollectionType.ConcurrentQueue);
+        var taskHandler = new AsyncTaskController(3, EnumCollectionType.ConcurrentQueue);
         var tasks = new List<Task>();
         foreach (var num in Enumerable.Range(1, 7))
         {
@@ -31,8 +20,7 @@ internal class Program
                 return Task.Factory.StartNew(() => num);
             }));
         }
-       
-            await Task.WhenAll(tasks);
+        await Task.WhenAll(tasks);
 
         Console.ReadKey();
     }

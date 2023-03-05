@@ -24,9 +24,7 @@ C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.dll
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.pdb
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TasksGenerator.dll
-C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TasksHandler.dll
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TasksGenerator.pdb
-C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TasksHandler.pdb
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.csproj.AssemblyReference.cache
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.AssemblyInfoInputs.cache
@@ -38,3 +36,7 @@ C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.pdb
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.genruntimeconfig.cache
 C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\obj\Debug\net7.0\ref\ConsoleApp1.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TaskHandler.Domain.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TasksHandler.Application.dll
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TasksHandler.Application.pdb
+C:\Users\Nuno\Desktop\Github\TaskHandler\TaskHandler\ConsoleApp1\bin\Debug\net7.0\TaskHandler.Domain.pdb
