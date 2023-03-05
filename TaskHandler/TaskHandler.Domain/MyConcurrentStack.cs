@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskHandler.Domain
 {
-    internal class MyConcurrentStack<T> : ConcurrentStack<T>, IConcurrentCollection<T>
+    public class MyConcurrentStack<T> : ConcurrentStack<T>, IConcurrentCollection<T>
     {
         public void NextItemIntoCollection(T item)
         {

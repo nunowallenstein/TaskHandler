@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TasksGenerator\TasksGenerator.csproj" />
-    <ProjectReference Include="..\TasksHandler\TasksHandler.csproj" />
+    <ProjectReference Include="..\TasksHandler\TasksHandler.Application.csproj" />
   </ItemGroup>
 
 </Project>
