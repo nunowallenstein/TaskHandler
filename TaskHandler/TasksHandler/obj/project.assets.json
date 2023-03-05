@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "TaskHandler.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/TaskHandler.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskHandler.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TaskHandler.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TaskHandler.Domain/TaskHandler.Domain.csproj",
+      "msbuildProject": "../TaskHandler.Domain/TaskHandler.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "TaskHandler.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Nuno\\.nuget\\packages\\": {},
@@ -15,9 +34,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.csproj",
-      "projectName": "TasksHandler",
-      "projectPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.csproj",
+      "projectUniqueName": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.Application.csproj",
+      "projectName": "TasksHandler.Application",
+      "projectPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.Application.csproj",
       "packagesPath": "C:\\Users\\Nuno\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\obj\\",
       "projectStyle": "PackageReference",
@@ -43,7 +62,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TaskHandler.Domain\\TaskHandler.Domain.csproj": {
+              "projectPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TaskHandler.Domain\\TaskHandler.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

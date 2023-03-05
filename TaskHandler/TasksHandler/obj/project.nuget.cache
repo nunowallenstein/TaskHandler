@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kvqANYorqRvgea+TBdDnniy9/82mHtGpEKpmcKtK5cLFs27SLbGSII05M58oDe2a33WDQ7X99EpwRn9w1a8p2w==",
+  "dgSpecHash": "yEZY29UGOFVGWzvw8lgfnybQz7F+hkanX+Lhl3B4nU2XgN6PXv75UU3tkZODGDkkL5tyzv2Hq14Z4wfCJJY7Zw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.csproj",
+  "projectFilePath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

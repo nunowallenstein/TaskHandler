@@ -2,22 +2,32 @@
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
+using TaskHandler.Domain;
 
 public class AsyncTaskController
 {
-    private readonly int _maxConcurrentTasks;
-    private readonly ConcurrentQueue<Func<Task>> _taskQueue = new ConcurrentQueue<Func<Task>>();
+
+    private readonly IConcurrentCollection<Func<Task>> _taskQueue;
     private readonly SemaphoreSlim _semaphore;
 
-    public AsyncTaskController(int maxConcurrentTasks)
+    public AsyncTaskController(int maxConcurrentTasks,EnumCollectionType collectionType)
     {
-        _maxConcurrentTasks = maxConcurrentTasks;
         _semaphore = new SemaphoreSlim(maxConcurrentTasks, maxConcurrentTasks);
+        _taskQueue = CreateConcurrentCollection(collectionType);
+    }
+
+    private IConcurrentCollection<Func<Task>> CreateConcurrentCollection(EnumCollectionType collectionType)
+    {
+         return collectionType switch
+        {
+            EnumCollectionType.ConcurrentQueue => new MyConcurrentQueue<Func<Task>>(),
+            EnumCollectionType.ConcurrentStack => new MyConcurrentStack<Func<Task>>()
+        };
     }
 
     public async Task EnqueueAsync(Func<Task> taskFunc)
     {
-        _taskQueue.Enqueue(taskFunc);
+        _taskQueue.NextItemIntoCollection(taskFunc);
         await TryStartNextAsync();
     }
 
@@ -25,7 +35,7 @@ public class AsyncTaskController
     public async Task<TResult> EnqueueAsync<TResult>(Func<Task<TResult>> taskFunc)
     {
         var tcs = new TaskCompletionSource<TResult>();
-        _taskQueue.Enqueue(async () =>
+        _taskQueue.NextItemIntoCollection(async () =>
         {
             try
             {
@@ -35,6 +45,7 @@ public class AsyncTaskController
             catch (Exception ex)
             {
                 tcs.SetException(ex);
+                throw; // to be liskov compliant, all tasks must succeed
             }
         });
 
@@ -48,7 +59,7 @@ public class AsyncTaskController
         await _semaphore.WaitAsync();
         try
         {
-            while (_taskQueue.TryDequeue(out var taskFunc))
+            while (_taskQueue.TryRemoveItemFromCollection(out var taskFunc))
             {
                 await taskFunc();
             }

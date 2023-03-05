@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "TaskHandler.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/TaskHandler.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskHandler.Domain.dll": {}
+        }
+      },
       "TasksGenerator/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -12,34 +22,42 @@
           "bin/placeholder/TasksGenerator.dll": {}
         }
       },
-      "TasksHandler/1.0.0": {
+      "TasksHandler.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "TaskHandler.Domain": "1.0.0"
+        },
         "compile": {
-          "bin/placeholder/TasksHandler.dll": {}
+          "bin/placeholder/TasksHandler.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TasksHandler.dll": {}
+          "bin/placeholder/TasksHandler.Application.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "TaskHandler.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TaskHandler.Domain/TaskHandler.Domain.csproj",
+      "msbuildProject": "../TaskHandler.Domain/TaskHandler.Domain.csproj"
+    },
     "TasksGenerator/1.0.0": {
       "type": "project",
       "path": "../TasksGenerator/TasksGenerator.csproj",
       "msbuildProject": "../TasksGenerator/TasksGenerator.csproj"
     },
-    "TasksHandler/1.0.0": {
+    "TasksHandler.Application/1.0.0": {
       "type": "project",
-      "path": "../TasksHandler/TasksHandler.csproj",
-      "msbuildProject": "../TasksHandler/TasksHandler.csproj"
+      "path": "../TasksHandler/TasksHandler.Application.csproj",
+      "msbuildProject": "../TasksHandler/TasksHandler.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "TasksGenerator >= 1.0.0",
-      "TasksHandler >= 1.0.0"
+      "TasksHandler.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -82,8 +100,8 @@
             "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksGenerator\\TasksGenerator.csproj": {
               "projectPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksGenerator\\TasksGenerator.csproj"
             },
-            "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.csproj": {
-              "projectPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.csproj"
+            "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.Application.csproj": {
+              "projectPath": "C:\\Users\\Nuno\\Desktop\\Github\\TaskHandler\\TaskHandler\\TasksHandler\\TasksHandler.Application.csproj"
             }
           }
         }

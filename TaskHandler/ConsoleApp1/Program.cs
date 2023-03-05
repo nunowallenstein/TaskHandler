@@ -4,6 +4,7 @@ using TasksGenerator;
 using System.Reflection.Metadata.Ecma335;
 using System.Diagnostics;
 using System.Collections.Concurrent;
+using TaskHandler.Domain;
 
 internal class Program
 {
@@ -20,7 +21,7 @@ internal class Program
 
 
         var sw = new Stopwatch();
-        var taskHandler = new AsyncTaskController(3);
+        var taskHandler = new AsyncTaskController(3,EnumCollectionType.ConcurrentQueue);
         var tasks = new List<Task>();
         foreach (var num in Enumerable.Range(1, 7))
         {
