@@ -7,8 +7,14 @@ using TaskHandler.Domain;
 public class AsyncTaskController
 {
 
-    private readonly IConcurrentCollection<Func<Task>> _taskQueue;
+    private readonly IConcurrentCollection<Func<Task>> _taskQueue = new MyConcurrentQueue<Func<Task>>(); //by default, if nothing is said, a concurrentQueue will be chosen
     private readonly SemaphoreSlim _semaphore;
+
+
+    public AsyncTaskController(int maxConcurrentTasks)
+    {
+        _semaphore = new SemaphoreSlim(maxConcurrentTasks, maxConcurrentTasks);
+    }
 
     public AsyncTaskController(int maxConcurrentTasks,EnumCollectionType collectionType)
     {
@@ -18,21 +24,21 @@ public class AsyncTaskController
 
     private IConcurrentCollection<Func<Task>> CreateConcurrentCollection(EnumCollectionType collectionType)
     {
-         return collectionType switch
+        return collectionType switch
         {
             EnumCollectionType.ConcurrentQueue => new MyConcurrentQueue<Func<Task>>(),
-            EnumCollectionType.ConcurrentStack => new MyConcurrentStack<Func<Task>>()
+            EnumCollectionType.ConcurrentStack => new MyConcurrentStack<Func<Task>>(),
         };
     }
 
-    public async Task EnqueueAsync(Func<Task> taskFunc)
+    public async Task ProcessNextTaskAsync(Func<Task> taskFunc)
     {
         _taskQueue.NextItemIntoCollection(taskFunc);
         await TryStartNextAsync();
     }
 
 
-    public async Task<TResult> EnqueueAsync<TResult>(Func<Task<TResult>> taskFunc)
+    public async Task<TResult> ProcessNextTaskAsync<TResult>(Func<Task<TResult>> taskFunc)
     {
         var tcs = new TaskCompletionSource<TResult>();
         _taskQueue.NextItemIntoCollection(async () =>

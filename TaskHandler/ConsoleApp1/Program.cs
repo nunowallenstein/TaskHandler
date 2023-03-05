@@ -25,7 +25,7 @@ internal class Program
         var tasks = new List<Task>();
         foreach (var num in Enumerable.Range(1, 7))
         {
-            tasks.Add(taskHandler.EnqueueAsync(async () =>
+            tasks.Add(taskHandler.ProcessNextTaskAsync(async () =>
             {
                 await Tasks.TaskWithTimeout(3000, num);
                 return Task.Factory.StartNew(() => num);
