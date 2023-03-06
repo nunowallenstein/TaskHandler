@@ -13,12 +13,12 @@ public class AsyncTaskController
 
     public AsyncTaskController(int maxConcurrentTasks)
     {
-        _semaphore = new SemaphoreSlim(maxConcurrentTasks, maxConcurrentTasks);
+        _semaphore = new SemaphoreSlim(maxConcurrentTasks);
     }
 
     public AsyncTaskController(int maxConcurrentTasks,EnumCollectionType collectionType)
     {
-        _semaphore = new SemaphoreSlim(maxConcurrentTasks, maxConcurrentTasks);
+        _semaphore = new SemaphoreSlim(maxConcurrentTasks);
         _taskQueue = CreateConcurrentCollection(collectionType);
     }
 
